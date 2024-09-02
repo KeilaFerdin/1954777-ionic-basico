@@ -6,3 +6,8 @@ label {
 body {
   background-color: #e60bbe;
 }
+
+.main {
+  width: 40%;
+  margin: 0 auto;
+}

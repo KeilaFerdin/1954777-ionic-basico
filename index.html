@@ -8,11 +8,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <label for="">Inserta texto abajo:</label>
-    <input type="text" id="campoTxt" />
+    <div class="main">
+      <div>
+        <label for="usuarioTxt">Usuario</label>
+        <input type="text" id="usuarioTxt" />
+      </div>
 
-    <button onclick="imprimirTexto()">Click</button>
-    <button onclick="borrarTexto()">Borrar</button>
+      <div>
+        <label for="passwordTxt">Password</label>
+        <input type="text" id="passwordTxt" />
+      </div>
+
+      <div>
+        <button onclick="iniciarSesion()">Iniciar Sesion</button>
+      </div>
+
+      <div>
+        <button>Registrarme</button>
+      </div>
+    </div>
+
+    <p></p>
   </body>
 
   <script src="script.js"></script>

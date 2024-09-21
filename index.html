@@ -5,30 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML + CSS</title>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="main">
-      <div>
-        <label for="usuarioTxt">Usuario</label>
-        <input type="text" id="usuarioTxt" />
+    <div>
+      <div class="row">
+        <ion-input label="Articulo" id="articulo"></ion-input>
       </div>
-
-      <div>
-        <label for="passwordTxt">Password</label>
-        <input type="text" id="passwordTxt" />
+      <div class="row">
+        <ion-input label="Monto" type="number" id="monto"></ion-input>
       </div>
-
-      <div>
-        <button onclick="iniciarSesion()">Iniciar Sesion</button>
-      </div>
-
-      <div>
-        <button>Registrarme</button>
+      <div class="row">
+        <ion-button onclick="calcularTotal()">Calcular Total</ion-button>
       </div>
     </div>
-
-    <p></p>
+    <ul id="listaTicket"></ul>
+    <p>Total</p>
   </body>
 
   <script src="script.js"></script>

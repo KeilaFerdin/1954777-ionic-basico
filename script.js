@@ -1,19 +1,24 @@
-var usuarioTxt = document.getElementById("usuarioTxt");
-var passwordTxt = document.getElementById("passwordTxt");
+var articulo = document.getElementById("articulo");
+var monto = document.getElementById("monto");
 
-var parrafo = document.querySelector("p");
+var parrafoTotal = document.querySelector("p");
+var lista = document.querySelector("ul");
 
-function iniciarSesion() {
-  //....
-  var usuarioValor = usuarioTxt.value;
-  //parrafo.innerHTML = "Login correcto " + usuarioValor;
+var total = 0;
 
-  parrafo.innerHTML = `Login correcto <strong>${usuarioValor}</strong>`;
-}
+function calcularTotal() {
+  var articuloValue = articulo.value;
+  var montoValue = monto.value;
 
-function registro() {
-  //...
-  var usuarioValor = usuarioTxt.value;
-  //parrafo.innerHTML = "Registro con éxito " + usuarioValor;
-  parrafo.innerHTML = `Registro con éxito <strong>${usuarioValor}</strong>`;
+  total = total + parseInt(montoValue);
+
+  var elemento = document.createElement("li");
+  elemento.innerHTML = `${articuloValue}.......<strong>$${montoValue}</strong>`;
+
+  lista.appendChild(elemento);
+
+  parrafoTotal.innerHTML = `<strong>Total..........$${total}</strong>`;
+
+  articulo.value = "";
+  monto.value = "";
 }

@@ -1,0 +1,38 @@
+:host {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    overflow: visible; 
+  }
+  
+  .producto {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    align-items: center;
+    overflow: hidden; 
+  }
+  
+  .producto img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  .info {
+    flex: 1; 
+    
+    h2 {
+      font-size: 1.5em;
+      margin: 8px 0;
+    }
+  
+    p {
+      color: #555;
+      margin: 0; 
+    }
+  }
+  

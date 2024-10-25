@@ -6,6 +6,13 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  display: flex; /* Usar flexbox para organizar el contenido */
+  flex-direction: column; /* Coloca los hijos en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: flex-start; /* Empieza desde la parte superior */
+  height: 100%; /* Ocupa toda la altura */
+  padding: 16px; /* Espaciado interno */
+  box-sizing: border-box; /* Asegúrate de que el padding no afecte el tamaño */
 }
 
 #container strong {
@@ -24,4 +31,9 @@
 
 #container a {
   text-decoration: none;
+}
+
+ion-content {
+  --padding-top: 0; /* Elimina padding superior */
+  --padding-bottom: 0; /* Elimina padding inferior */
 }

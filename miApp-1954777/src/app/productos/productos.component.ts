@@ -20,7 +20,7 @@ export class ProductosComponent implements OnInit {
 
   obtenerProductos(): void {
     this.consulta.getProductos().subscribe((resp: any) => {
-      this.productos = resp; // Asumiendo que el resp es un array de productos
+      this.productos = resp; 
       console.log(this.productos); // Para depuración
     });
   }

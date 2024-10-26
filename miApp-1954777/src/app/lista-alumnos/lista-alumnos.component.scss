@@ -1,0 +1,56 @@
+ion-input.ng-invalid.ng-touched {
+    border-color: red;
+  }
+  
+  ion-input.ng-valid.ng-touched {
+    border-color: green;
+  }
+  
+
+  form {
+    margin-top: 150px; 
+  }
+  
+  .button-container {
+    display: flex; 
+    justify-content: center;
+    margin-top: 20px; 
+    margin-bottom: 40px; 
+  }
+  
+  .submit-btn {
+    width: 200px; 
+    margin: 0; 
+  }
+  
+  
+  ion-checkbox {
+    margin-top: 16px; 
+  }
+  
+
+  ion-list {
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 0; //  espacios innecesarios
+  }
+  
+  ion-item {
+    --padding-start: 16px; //  empiece más a la izquierda
+    --padding-end: 16px;  
+    font-size: 1.2em; //  tamaño del texto
+    border-bottom: 1px solid #ddd; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  ion-button {
+    margin-left: 100px; 
+  }
+  
+  ion-label {
+    white-space: nowrap; 
+  }
+  

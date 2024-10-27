@@ -4,6 +4,10 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 import { provideHttpClient, withFetch } from '@angular/common/http'; 
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
+import { camera } from 'ionicons/icons';
+import { addIcons } from 'ionicons';
+
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -13,3 +17,11 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(withFetch()), 
    ]
 });
+
+
+addIcons({
+  camera: camera,
+});
+
+
+defineCustomElements(window);

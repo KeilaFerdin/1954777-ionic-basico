@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { Capacitor } from '@capacitor/core';
+import { SplashScreen, SplashScreenPlugin } from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
@@ -9,23 +10,17 @@ import { Capacitor } from '@capacitor/core';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  platform: string;
 
-  constructor() {
-    this.platform = Capacitor.getPlatform();
-    this.detectPlatform();
-  }
+ constructor(){
+  this.mostrarSplashScreen();
+ }
+   
+ async mostrarSplashScreen(){
 
-  detectPlatform() {
-    if (this.platform === 'android') {
-      console.log('Estás en Android');
-   
-    } else if (this.platform === 'ios') {
-      console.log('Estás en iOS');
-   
-    } else if (this.platform === 'web') {
-      console.log('Estás en Web');
-  
-    }
+  await SplashScreen.show({
+  autoHide: false,
+  showDuration: 2000
+  });
+
   }
 }
